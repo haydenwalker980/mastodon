@@ -1,5 +1,5 @@
-web: bin/start-stunnel bin/heroku-web
-worker: bin/start-stunnel bundle exec sidekiq
+web: bin/heroku-web
+worker: bundle exec sidekiq
 
 # For the streaming API, you need a separate app that shares Postgres and Redis:
 #
