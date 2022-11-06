@@ -45,6 +45,6 @@ class RedisConfiguration
   private
 
   def raw_connection
-    Redis.new(url: url, driver: :hiredis)
+    Redis.new(url: url, driver: :hiredis, ssl_params: {verify_mode: OpenSSL::SSL::VERIFY_NONE})
   end
 end
