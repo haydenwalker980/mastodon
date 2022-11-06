@@ -43,6 +43,7 @@ REDIS_SIDEKIQ_PARAMS = {
   driver: :hiredis,
   url: ENV['SIDEKIQ_REDIS_URL'],
   namespace: sidekiq_namespace,
+  ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE },
 }.freeze
 
 if Rails.env.test?
